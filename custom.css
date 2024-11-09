@@ -1,106 +1,128 @@
 /* Reset some default styles */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Basic body styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
   line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
   margin: 0;
-}
-
-/* Container */
-#container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
 }
 
-/* Header */
-header {
+/* Container styling */
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
 }
 
 header h1 a {
-  color: #333;
   text-decoration: none;
-  font-size: 2rem;
-  font-weight: bold;
+  color: #333;
 }
 
 header h1 a:hover {
-  color: #0056b3;
+  color: #007bff;
 }
 
-/* Breadcrumbs */
-.breadcrumbs {
-  font-size: 0.9rem;
+/* Breadcrumbs styling */
+nav.breadcrumbs {
   margin-bottom: 20px;
+  font-size: 0.9rem;
 }
 
-.breadcrumbs a {
-  color: #0056b3;
+.breadcrumbs .breadcrumb-item {
+  color: #555;
   text-decoration: none;
 }
 
-.breadcrumbs a:hover {
-  text-decoration: underline;
+.breadcrumbs .breadcrumb-item:hover {
+  color: #007bff;
 }
 
-/* Albums section */
+.breadcrumbs .breadcrumb-item::after {
+  content: '>';
+  margin: 0 8px;
+  color: #999;
+}
+
+.breadcrumbs .breadcrumb-item:last-of-type::after {
+  content: '';
+}
+
+/* Albums section styling */
 #albums {
   margin-bottom: 20px;
 }
 
-/* Media Gallery */
+/* Media gallery styling */
 #media {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
 }
 
 #media li {
-  width: calc(33.333% - 10px);
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  width: calc(25% - 16px);
+  border-radius: 6px;
   overflow: hidden;
-  background-color: #fff;
+  transition: transform 0.3s ease;
 }
 
-#media img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform 0.2s;
-}
-
-#media img:hover {
+#media li:hover {
   transform: scale(1.05);
 }
 
-/* Footer */
+#media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Footer styling */
 footer {
-  text-align: center;
   margin-top: 20px;
+  text-align: center;
+  color: #777;
   font-size: 0.9rem;
-  color: #666;
 }
 
-footer p {
-  margin: 5px;
+/* LightGallery thumbnail customization */
+.lg-thumb {
+  background-color: #fff;
+  padding: 10px;
 }
 
-/* Responsive design */
+.lg-thumb-item img {
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   #media li {
-    width: calc(50% - 10px);
+    width: calc(50% - 16px);
   }
 }
 
