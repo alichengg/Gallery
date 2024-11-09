@@ -1,1 +1,111 @@
-/* Your custom styles goes here */
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Container */
+#container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 a {
+  color: #333;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header h1 a:hover {
+  color: #0056b3;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Albums section */
+#albums {
+  margin-bottom: 20px;
+}
+
+/* Media Gallery */
+#media {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#media li {
+  width: calc(33.333% - 10px);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+#media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+#media img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer p {
+  margin: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #media li {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  #media li {
+    width: 100%;
+  }
+}
