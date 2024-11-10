@@ -69,7 +69,7 @@ header h1 a {
 #media {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -77,8 +77,8 @@ header h1 a {
 
 #media li {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 180px; /* Increased width */
+    height: 180px; /* Increased height */
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -120,11 +120,11 @@ footer p {
     }
 
     #media {
-        gap: 10px;
+        gap: 15px;
     }
 
     #media li {
-        width: 100px;
-        height: 100px;
+        width: 150px; /* Adjusted width for smaller screens */
+        height: 150px; /* Adjusted height for smaller screens */
     }
 }
