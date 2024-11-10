@@ -8,6 +8,5 @@
   "cleanup": true,
   "theme": "cards",
   "css": "./custom.css",
-  "footer": " Ali ",
   "usage-stats": false
 }
