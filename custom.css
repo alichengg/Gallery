@@ -1,12 +1,11 @@
 /* General resets */
-
 html, body {
     padding: 0;
     margin: 0;
     height: 100%;
     font-family: 'Roboto', sans-serif;
     color: #333;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     line-height: 1.6;
 }
 
@@ -22,79 +21,29 @@ a:hover {
 
 /* Container */
 #container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
 header {
     text-align: center;
-    padding: 40px 0;
-    background: linear-gradient(135deg, #333, #444);
-    color: #fff;
-    border-radius: 10px 10px 0 0;
+    padding: 20px 0;
+    background: #ffffff;
+    border-bottom: 2px solid #ececec;
 }
 header h1 {
-    font-size: 2.8em;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-/* Breadcrumbs */
-.breadcrumbs {
-    margin: 20px 0;
-    padding: 8px 16px;
-    background-color: #ececec;
-    border-radius: 20px;
-    font-size: 0.9em;
-}
-.breadcrumbs a {
-    color: #333;
-}
-.breadcrumbs a:hover {
-    text-decoration: underline;
-}
-
-/* Albums section */
-#albums {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-#albums a {
-    width: 280px;
-    height: 200px;
-    background-color: #eee;
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#albums a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-#albums .info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 1em;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 /* Media gallery */
 #media {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -102,62 +51,35 @@ header h1 {
 #media li {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#media li:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 #media img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease;
 }
 #media li:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    font-size: 1em;
-    color: #fff;
-    background: #333;
-    margin-top: 40px;
-    border-radius: 0 0 10px 10px;
-}
-
-/* Pagination */
-nav.pagination {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 20px;
-}
-nav.pagination .page {
-    padding: 8px 16px;
-    color: #333;
-    background: transparent;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-nav.pagination .page:hover,
-nav.pagination .page.current {
-    background: #007bff;
-    color: #fff;
+    font-size: 0.9em;
+    color: #555;
+    background: #fafafa;
+    border-top: 2px solid #ececec;
 }
 
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
-    #albums a {
-        width: 100%;
-        height: 180px;
+    header h1 {
+        font-size: 1.5em;
     }
-    #container {
-        padding: 15px;
+    #media {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
